@@ -33,14 +33,13 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
-
+  
 markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      auto_title: true
+      guess_lang: true      
+  - pymdownx.superfences    
   - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.tabbed:
-      alternate_style: true
