@@ -8,9 +8,9 @@ copyright: >
 
 nav:
   - 'Main page': 'index.md'
-  - 'Table of contents': 'table-of-contents.md'
-  - Contributing: 'contributing.md'
-  - 'Wiki news': 'wiki-news.md'
+  - 'Table of contents': 'table-of-contents'
+  - Contributing: 'contributing'
+  - 'Wiki news': 'wiki-news'
 
 extra:
   social:
