@@ -22,11 +22,11 @@
                 <img src="{{ base_url }}/{{ config.theme.logo }}" alt="Logo" class="brand-logo" onerror="this.style.display='none'">
                 {% endif %}
                 <span class="brand-name">{{ config.site_name }}</span>
-                <button type="button" class="search-trigger-btn" id="search-open-btn">
+            </a>
+            <button type="button" class="search-trigger-btn" id="search-open-btn">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <span>Search something on this wiki....</span>
-                </button>
-            </a>
+            </button>
             <div class="header-right">
                 {% if config.repo_url %}
                 <a href="{{ config.repo_url }}" target="_blank" class="repo-link" rel="noopener">
