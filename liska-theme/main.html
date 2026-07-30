@@ -23,8 +23,17 @@
                 {% endif %}
                 <span class="brand-name">{{ config.site_name }}</span>
                 <div class="search-box">
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="text" id="wiki-search-input" placeholder="Search something on this wiki...." autocomplete="off">
+                    <form action="javascript:void(0);" role="search" onsubmit="return false;">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input 
+                            type="search" 
+                            id="wiki-search-input" 
+                            placeholder="Search something on this wiki...." 
+                            autocomplete="off" 
+                            inputmode="search" 
+                            enterkeyhint="search"
+                        >
+                    </form>
                     <div id="wiki-search-results" class="search-results-dropdown"></div>
                 </div>
             </a>
