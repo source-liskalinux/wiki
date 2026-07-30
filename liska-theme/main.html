@@ -22,6 +22,11 @@
                 <img src="{{ base_url }}/{{ config.theme.logo }}" alt="Logo" class="brand-logo" onerror="this.style.display='none'">
                 {% endif %}
                 <span class="brand-name">{{ config.site_name }}</span>
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="wiki-search-input" placeholder="Search something on this wiki...." autocomplete="off">
+                    <div id="wiki-search-results" class="search-results-dropdown"></div>
+                </div>
             </a>
             <div class="header-right">
                 {% if config.repo_url %}
@@ -84,5 +89,11 @@
             <div class="copyright">{{ config.copyright }}</div>
         </div>
     </footer>
+    <script>
+      const searchIndexUrl = "{{ base_url }}/search/search_index.json";
+      const baseUrl = "{{ base_url }}";
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    <script src="{{ base_url }}/js/search.js"></script>
 </body>
 </html>
