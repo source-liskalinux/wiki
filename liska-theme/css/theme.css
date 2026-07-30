@@ -86,10 +86,10 @@ body {
   -webkit-text-fill-color: transparent;
 }
 .brand-logo {
-  height: 22px;
-  max-height: 24px;
+  height: auto;
+  max-height: 35px;
   width: auto;
-  max-width: 24px;
+  max-width: 35px;
   object-fit: contain;
   display: block;
 }
@@ -280,3 +280,31 @@ body {
 .highlight .m, .highlight .mf { color: #bd93f9 }
 .highlight .nb { color: #8be9fd }
 .highlight .nf { color: #50fa7b }
+
+@media screen and (max-width: 900px) {
+  .layout-container {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin: 1rem auto;
+    padding: 0 1rem;
+  }
+  
+  .layout-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-glass {
+    order: 1;
+    width: 100%;
+    padding: 1.5rem 1.25rem;
+    border-radius: 12px;
+  }
+
+  .sidebar-glass {
+    order: 2;
+    position: static;
+    width: 100%;
+    border-radius: 12px;
+  }
+}
