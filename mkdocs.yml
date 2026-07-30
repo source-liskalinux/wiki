@@ -6,6 +6,12 @@ copyright: >
   &copy; Liska Linux Wiki | 2026 &bull;
   General Public License v3 or Later
 
+nav:
+  - 'Main page': 'index.md'
+  - 'Table of contents': 'table-of-contents.md'
+  - Contributing: 'contributing.md'
+  - 'Wiki news': 'wiki-news.md'
+
 extra:
   social:
     - icon: fontawesome/brands/github
