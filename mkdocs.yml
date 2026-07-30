@@ -39,3 +39,6 @@ markdown_extensions:
       guess_lang: true      
   - pymdownx.superfences    
   - pymdownx.inlinehilite
+
+plugins:
+  - search
