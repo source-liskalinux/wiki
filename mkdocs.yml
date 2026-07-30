@@ -3,21 +3,25 @@ site_description: A Documentation Wiki For Liska Linux
 
 theme:
   name: material
+  favicon: assets/logo.svg
+  logo: assets/logo.svg
+
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: blue
+      primary: cyan
+      accent: cyan
       toggle:
         icon: material/brightness-7
         name: Dark Mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: blue
+      primary: cyan
+      accent: cyan
       toggle:
         icon: material/brightness-4
         name: Light Mode
+
   features:
     - navigation.tabs
     - navigation.sections
@@ -25,11 +29,18 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
+    - content.tabs.link
+
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions:
   - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
