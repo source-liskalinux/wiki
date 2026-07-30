@@ -3,6 +3,11 @@
   --md-primary-fg-color--light: #33a3dc;
   --md-primary-fg-color--dark:  #0e71a3;
   --md-accent-fg-color:         #1793d1;
+  --md-grid-max-width: 53rem;
+}
+
+.md-content {
+  max-width: 100%;
 }
 
 [data-md-color-scheme="slate"] .md-typeset .admonition {
