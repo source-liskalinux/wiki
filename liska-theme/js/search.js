@@ -54,3 +54,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   });
 });
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const searchInput = document.getElementById('wiki-search-input');
+    if (searchInput) {
+      searchInput.blur();
+    }
+  }
+});
