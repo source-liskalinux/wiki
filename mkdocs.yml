@@ -6,6 +6,12 @@ copyright: >
   &copy; Liska Linux Wiki | 2026 &bull;
   General Public License v3 or Later
 
+theme:
+  name: null
+  custom_dir: liska-theme
+  favicon: assets/logo.svg
+  logo: assets/logo.svg
+
 nav:
   - 'Main page': 'index.md'
   - 'Table of contents': 'table-of-contents'
@@ -14,50 +20,16 @@ nav:
 
 extra:
   social:
-    - icon: fontawesome/brands/github
+    - icon: fa-brands fa-github
       link: https://github.com/source-liskalinux
       name: Liska Linux Github Source Repository
-    - icon: fontawesome/brands/discord
+    - icon: fa-brands fa-discord
       link: https://discord.gg/
       name: Liska Linux Discord Community Server
-    - icon: fontawesome/solid/globe
+    - icon: fa-solid fa-globe
       link: https://liskalinuxproject.web.app
-      name: Liska Linux Website
+      name: Liska Linux Project Website
 
-theme:
-  name: material
-  favicon: assets/logo.svg
-  logo: assets/logo.svg
-
-  palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: cyan
-      accent: cyan
-      toggle:
-        icon: material/brightness-7
-        name: Dark Mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: cyan
-      accent: cyan
-      toggle:
-        icon: material/brightness-4
-        name: Light Mode
-
-  features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.top
-    - navigation.footer
-    - search.suggest
-    - search.highlight
-    - content.code.copy
-    - content.tabs.link
-
-extra_css:
-  - stylesheets/extra.css
-  
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -67,6 +39,3 @@ markdown_extensions:
       guess_lang: true      
   - pymdownx.superfences    
   - pymdownx.inlinehilite
-
-hide:
-  - toc
