@@ -1,0 +1,58 @@
+:root {
+  --md-primary-fg-color:        #1793d1;
+  --md-primary-fg-color--light: #33a3dc;
+  --md-primary-fg-color--dark:  #0e71a3;
+  --md-accent-fg-color:         #1793d1;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition {
+  background-color: #0e1117;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition-title {
+  background-color: transparent;
+  font-weight: bold;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.warning,
+[data-md-color-scheme="slate"] .md-typeset .admonition.danger {
+  border-color: #ff4d4d;
+}
+[data-md-color-scheme="slate"] .md-typeset .warning > .admonition-title,
+[data-md-color-scheme="slate"] .md-typeset .danger > .admonition-title {
+  color: #ff4d4d;
+}
+[data-md-color-scheme="slate"] .md-typeset .warning > .admonition-title::before,
+[data-md-color-scheme="slate"] .md-typeset .danger > .admonition-title::before {
+  background-color: #ff4d4d;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.tip,
+[data-md-color-scheme="slate"] .md-typeset .admonition.success {
+  border-color: #2ed573;
+}
+[data-md-color-scheme="slate"] .md-typeset .tip > .admonition-title,
+[data-md-color-scheme="slate"] .md-typeset .success > .admonition-title {
+  color: #2ed573;
+}
+[data-md-color-scheme="slate"] .md-typeset .tip > .admonition-title::before,
+[data-md-color-scheme="slate"] .md-typeset .success > .admonition-title::before {
+  background-color: #2ed573;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.note,
+[data-md-color-scheme="slate"] .md-typeset .admonition.info {
+  border-color: #1793d1;
+}
+[data-md-color-scheme="slate"] .md-typeset .note > .admonition-title,
+[data-md-color-scheme="slate"] .md-typeset .info > .admonition-title {
+  color: #1793d1;
+}
+[data-md-color-scheme="slate"] .md-typeset .note > .admonition-title::before,
+[data-md-color-scheme="slate"] .md-typeset .info > .admonition-title::before {
+  background-color: #1793d1;
+}
