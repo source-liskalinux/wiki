@@ -281,7 +281,7 @@ body {
 .highlight .nb { color: #8be9fd }
 .highlight .nf { color: #50fa7b }
 
-@media screen and (max-width: 900px) {
+@media (max-width: 900px) {
   .layout-container {
     grid-template-columns: 1fr;
     gap: 1.25rem;
