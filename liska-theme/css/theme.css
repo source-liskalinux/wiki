@@ -85,6 +85,14 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.brand-logo {
+  height: 22px;
+  max-height: 24px;
+  width: auto;
+  max-width: 24px;
+  object-fit: contain;
+  display: block;
+}
 
 .header-right {
   display: flex;
