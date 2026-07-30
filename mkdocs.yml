@@ -1,6 +1,25 @@
 site_name: Liska Linux Wiki
 site_description: A Documentation Wiki For Liska Linux
 
+copyright: >
+  &copy; Liska Linux Wiki | 2026 &bull;
+  General Public License v3 or Later
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/source-liskalinux
+      name: Liska Linux Github Source Repository
+    - icon: fontawesome/brands/github
+      link: https://repo-liskalinux.github.io
+      name: Liska Linux Github Packages Repository
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/
+      name: Liska Linux Discord Community Server
+    - icon: fontawesome/solid/globe
+      link: https://liskalinuxproject.web.app
+      name: Liska Linux Website
+
 theme:
   name: material
   favicon: assets/logo.svg
@@ -26,6 +45,7 @@ theme:
     - navigation.tabs
     - navigation.sections
     - navigation.top
+    - navigation.footer
     - search.suggest
     - search.highlight
     - content.code.copy
