@@ -1,17 +1,16 @@
-# Welcome to MkDocs
+# Main page
+**Welcome to Liska Linux Wiki: a web documentation for your Liska Linux system.**
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Visit [Table of contents](https://liskalinuxwiki.web.app/table-of-contents) for a list of article categories.
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## Important articles
+* [Liska Linux](https://liskalinuxwiki.web.app/liskalinux):
+  Overview of Liska Linux describing what to expect and philosophy of the Liska Linux system.
+* [Installation guide](https://liskalinuxwiki.web.app/installation-guide):
+  Guide to installing Liska Linux to your system.
+* [Recommendations](https://liskalinuxwiki.web.app/recommendations):
+  List of recommended post-installation tutorials and some popular articles.
+* [Liska compared](https://liskalinuxwiki.web.app/compared):
+  Summarize the similarities and differences between Liska Linux and other Linux distributions.
+* [Contributing](https://liskalinuxwiki.web.app/contributing):
+  Describes many ways how to contribute to Liska Linux community.
