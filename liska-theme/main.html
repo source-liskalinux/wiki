@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
+    {% if config.site_description %}<meta name="description" content="{{ config.site_description }}">{% endif %}
+    {% if config.theme.favicon %}<link rel="icon" href="{{ base_url }}/{{ config.theme.favicon }}">{% endif %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ base_url }}/css/theme.css">
+</head>
+<body>
+    <div class="bg-glow blob-1"></div>
+    <div class="bg-glow blob-2"></div>
+    <header class="header-glass">
+        <div class="header-container">
+            <a href="{{ base_url }}/" class="brand">
+                {% if config.theme.logo %}
+                <img src="{{ base_url }}/{{ config.theme.logo }}" alt="Logo" class="brand-logo" onerror="this.style.display='none'">
+                {% endif %}
+                <span class="brand-name">{{ config.site_name }}</span>
+            </a>
+            <div class="header-right">
+                {% if config.repo_url %}
+                <a href="{{ config.repo_url }}" target="_blank" class="repo-link" rel="noopener">
+                    <i class="fa-brands fa-github"></i> Repository
+                </a>
+                {% endif %}
+                {% if config.extra.social %}
+                <div class="social-links">
+                    {% for item in config.extra.social %}
+                    <a href="{{ item.link }}" target="_blank" title="{{ item.name }}" rel="noopener">
+                        <i class="{{ item.icon }}"></i>
+                    </a>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+    <div class="layout-container">
+        <aside class="sidebar-glass">
+            <div class="sidebar-header">
+                <i class="fa-solid fa-book-bookmark"></i> Navigation
+            </div>
+            <nav class="nav-tree">
+                <ul>
+                    {% for item in nav %}
+                    <li class="{% if item.active %}active{% endif %}">
+                        <a href="{{ item.url|url }}" class="nav-link {% if item.active %}active-link{% endif %}">
+                            <i class="fa-solid fa-angle-right nav-arrow"></i>
+                            <span>{{ item.title }}</span>
+                        </a>
+                        {% if item.children %}
+                        <ul class="nav-sub">
+                            {% for child in item.children %}
+                            <li class="{% if child.active %}active{% endif %}">
+                                <a href="{{ child.url|url }}" class="nav-link {% if child.active %}active-link{% endif %}">
+                                    <span>{{ child.title }}</span>
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </aside>
+        <main class="content-glass">
+            <article class="wiki-article">
+                {{ page.content }}
+            </article>
+        </main>
+    </div>
+    <footer class="footer-glass">
+        <div class="footer-container">
+            <div class="copyright">{{ config.copyright }}</div>
+        </div>
+    </footer>
+</body>
+</html>
