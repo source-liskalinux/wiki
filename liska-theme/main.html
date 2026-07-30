@@ -41,34 +41,36 @@
             </div>
         </div>
     </header>
-    <div class="layout-container">
         <aside class="sidebar-glass">
-            <div class="sidebar-header">
-                <i class="fa-solid fa-book-bookmark"></i> Navigation
-            </div>
-            <nav class="nav-tree">
-                <ul>
-                    {% for item in nav %}
-                    <li class="{% if item.active %}active{% endif %}">
-                        <a href="{{ item.url|url }}" class="nav-link {% if item.active %}active-link{% endif %}">
-                            <i class="fa-solid fa-angle-right nav-arrow"></i>
-                            <span>{{ item.title }}</span>
-                        </a>
-                        {% if item.children %}
-                        <ul class="nav-sub">
-                            {% for child in item.children %}
-                            <li class="{% if child.active %}active{% endif %}">
-                                <a href="{{ child.url|url }}" class="nav-link {% if child.active %}active-link{% endif %}">
-                                    <span>{{ child.title }}</span>
-                                </a>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                        {% endif %}
-                    </li>
-                    {% endfor %}
-                </ul>
-            </nav>
+            <details class="mobile-nav-toggle"> 
+                <summary class="sidebar-header">
+                    <i class="fa-solid fa-book-bookmark"></i> Wiki Navigation
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                </summary>
+                <nav class="nav-tree">
+                    <ul>
+                        {% for item in nav %}
+                        <li class="{% if item.active %}active{% endif %}">
+                             <a href="{{ item.url|url }}" class="nav-link {% if item.active %}active-link{% endif %}">
+                                 <i class="fa-solid fa-angle-right nav-arrow"></i>
+                                  <span>{{ item.title }}</span>
+                             </a>
+                             {% if item.children %}
+                             <ul class="nav-sub">
+                                  {% for child in item.children %}
+                                  <li class="{% if child.active %}active{% endif %}">
+                                      <a href="{{ child.url|url }}" class="nav-link {% if child.active %}active-link{% endif %}">
+                                          <span>{{ child.title }}</span>
+                                      </a>
+                                  </li>
+                                 {% endfor %}
+                            </ul>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </details>
         </aside>
         <main class="content-glass">
             <article class="wiki-article">
