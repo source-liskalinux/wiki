@@ -22,20 +22,10 @@
                 <img src="{{ base_url }}/{{ config.theme.logo }}" alt="Logo" class="brand-logo" onerror="this.style.display='none'">
                 {% endif %}
                 <span class="brand-name">{{ config.site_name }}</span>
-                <div class="search-box">
-                    <form action="javascript:void(0);" role="search" onsubmit="return false;">
-                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                        <input 
-                            type="search" 
-                            id="wiki-search-input" 
-                            placeholder="Search something on this wiki...." 
-                            autocomplete="off" 
-                            inputmode="search" 
-                            enterkeyhint="search"
-                        >
-                    </form>
-                    <div id="wiki-search-results" class="search-results-dropdown"></div>
-                </div>
+                <button type="button" class="search-trigger-btn" id="search-open-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Search something on this wiki....</span>
+                </button>
             </a>
             <div class="header-right">
                 {% if config.repo_url %}
@@ -98,6 +88,24 @@
             <div class="copyright">{{ config.copyright }}</div>
         </div>
     </footer>
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-backdrop" id="search-backdrop"></div>
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input 
+                    type="search" 
+                    id="wiki-search-input" 
+                    placeholder="Type the page name...." 
+                    autocomplete="off" 
+                    inputmode="search" 
+                    enterkeyhint="search"
+                >
+                <button type="button" id="search-close-btn" class="search-close-btn">&times;</button>
+            </div>
+            <div id="wiki-search-results" class="search-results-dropdown"></div>
+        </div>
+    </div>
     <script>
       const searchIndexUrl = "{{ base_url }}/search/search_index.json";
       const baseUrl = "{{ base_url }}";
