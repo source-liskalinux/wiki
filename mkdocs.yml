@@ -17,9 +17,6 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/source-liskalinux
       name: Liska Linux Github Source Repository
-    - icon: fontawesome/brands/github
-      link: https://repo-liskalinux.github.io
-      name: Liska Linux Github Packages Repository
     - icon: fontawesome/brands/discord
       link: https://discord.gg/
       name: Liska Linux Discord Community Server
