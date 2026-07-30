@@ -317,3 +317,57 @@ body {
     font-size: 0.75rem !important;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .header-container {
+    padding: 0.6rem 1rem;
+  }
+
+  .brand-name {
+    font-size: 1rem;
+  }
+
+  .brand-logo {
+    height: auto;
+    max-width: 30px;
+  }
+
+  .repo-link span,
+  .repo-link {
+    font-size: 0.78rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .social-links {
+    gap: 0.6rem;
+  }
+
+  .social-links a {
+    font-size: 1rem;
+  }
+
+  .wiki-article h1 {
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .wiki-article h2 {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .wiki-article h3 {
+    font-size: 1.05rem;
+  }
+
+  .wiki-article pre {
+    padding: 0.85rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+  }
+
+  .wiki-article blockquote {
+    padding: 0.6rem 0.9rem;
+    margin: 1rem 0;
+  }
+}
