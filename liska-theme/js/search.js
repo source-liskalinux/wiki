@@ -57,18 +57,32 @@ document.addEventListener('DOMContentLoaded', async () => {
       searchResults.innerHTML = '<div class="search-no-result">No results found.</div>';
       return;
     }
-    let html = '';
-    matches.slice(0, 8).forEach(result => {
+    const uniqueResults = [];
+    const seenLocations = new Set();
+    for (const result of matches) {
       const doc = searchData.find(d => d.location === result.ref);
-      if (doc) {
-        const docUrl = baseUrl + '/' + doc.location;
-        html += `
-          <a href="${docUrl}" class="search-result-item">
-            <div class="result-title">${doc.title}</div>
-            <div class="result-text">${(doc.text || '').substring(0, 90)}....</div>
-          </a>
-        `;
-      }
+      if (!doc) continue;
+      const pageLocation = doc.location.split('#')[0] || '';
+      if (seenLocations.has(pageLocation)) continue;
+      seenLocations.add(pageLocation);
+      uniqueResults.push(doc);
+      if (uniqueResults.length >= 8) break;
+    }
+
+    if (uniqueResults.length === 0) {
+      searchResults.innerHTML = '<div class="search-no-result">No results found.</div>';
+      return;
+    }
+
+    let html = '';
+    uniqueResults.forEach(doc => {
+      const docUrl = baseUrl + '/' + doc.location;
+      html += `
+        <a href="${docUrl}" class="search-result-item">
+          <div class="result-title">${doc.title}</div>
+          <div class="result-text">${(doc.text || '').substring(0, 90)}....</div>
+        </a>
+      `;
     });
     searchResults.innerHTML = html;
   });
