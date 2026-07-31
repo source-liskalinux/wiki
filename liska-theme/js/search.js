@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const lunrQuery = query
       .split(/\s+/)
       .filter((term) => term.length > 0)
-      .map((term) => `${term}*`)
+      .map((term) => `title:${term}*`)
       .join(' ');
     const matches = lunrIndex.search(lunrQuery);
     if (matches.length === 0) {

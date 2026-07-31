@@ -193,6 +193,50 @@ body {
   padding: 2.5rem 3rem;
   box-shadow: var(--glass-shadow);
   min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.wiki-article {
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  hyphens: auto;
+}
+
+.wiki-article p,
+.wiki-article li,
+.wiki-article h1,
+.wiki-article h2,
+.wiki-article h3,
+.wiki-article blockquote,
+.wiki-article td,
+.wiki-article th {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.wiki-article img,
+.wiki-article table,
+.wiki-article pre,
+.wiki-article code {
+  max-width: 100%;
+}
+
+.wiki-article table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.wiki-article td,
+.wiki-article th {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.wiki-article pre {
+  overflow-x: auto;
 }
 
 .wiki-article h1 {
@@ -451,8 +495,19 @@ body {
   .content-glass {
     order: 1 !important;
     width: 100% !important;
+    max-width: 100% !important;
     padding: 1.25rem 1rem !important;
     box-sizing: border-box !important;
+  }
+
+  .content-glass,
+  .wiki-article {
+    overflow-x: hidden !important;
+    word-break: break-word !important;
+  }
+
+  .wiki-article {
+    max-width: 100% !important;
   }
 
   .sidebar-glass {
