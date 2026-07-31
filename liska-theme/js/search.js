@@ -47,7 +47,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       searchResults.innerHTML = '';
       return;
     }
-    const matches = lunrIndex.search(`*${query}*`);
+    const lunrQuery = query
+      .split(/\s+/)
+      .filter((term) => term.length > 0)
+      .map((term) => `${term}*`)
+      .join(' ');
+    const matches = lunrIndex.search(lunrQuery);
     if (matches.length === 0) {
       searchResults.innerHTML = '<div class="search-no-result">No results found.</div>';
       return;

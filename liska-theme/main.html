@@ -23,7 +23,7 @@
                 {% endif %}
                 <span class="brand-name">{{ config.site_name }}</span>
             </a>
-            <button type="button" class="search-trigger-btn" id="search-open-btn">
+            <button type="button" class="search-trigger-btn" id="search-open-btn" aria-label="Open search" title="Open search">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <span>Search something....</span>
             </button>
@@ -96,7 +96,7 @@
                 <input 
                     type="search" 
                     id="wiki-search-input" 
-                    placeholder="Type the page name...." 
+                    placeholder="Search pages and content..." 
                     autocomplete="off" 
                     inputmode="search" 
                     enterkeyhint="search"
