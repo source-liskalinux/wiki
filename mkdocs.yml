@@ -1,5 +1,6 @@
 site_name: Liska Linux Wiki
 site_description: A Documentation Wiki For Liska Linux
+repo_url: https://github.com/source-liskalinux/wiki
 
 copyright: >
   &copy; Liska Linux Wiki | 2026 &bull;
