@@ -32,12 +32,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     const response = await fetch(searchIndexUrl);
     const data = await response.json();
     searchData = data.docs;
+    const pageSearchData = searchData.filter(doc => !doc.location.includes('#'));
     lunrIndex = lunr(function () {
       this.ref('location');
       this.field('title', { boost: 10 });
       this.field('text');
-      searchData.forEach(doc => this.add(doc));
+      pageSearchData.forEach(doc => this.add(doc));
     });
+    searchData = pageSearchData;
   } catch (err) {
     console.error('Error search index:', err);
   }
