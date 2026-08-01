@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #04060d 0%, #090e1f 45%, #10162a 100%);
+            --glass-bg: rgba(13, 19, 36, 0.65);
+            --glass-bg-hover: rgba(22, 32, 59, 0.8);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-blur: blur(18px) saturate(180%);
+            --dracula-purple: #bd93f9;
+            --dracula-cyan: #8be9fd;
+            --dracula-pink: #ff79c6;
+            --text-main: #f8f8f2;
+            --text-muted: #a0aec0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        .error-container {
+            text-align: center;
+            padding: 40px 30px;
+            max-width: 600px;
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            box-shadow: 0 10px 35px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        .error-code {
+            font-size: 7rem;
+            font-weight: 800;
+            margin: 0 0 10px 0;
+            background: linear-gradient(135deg, var(--dracula-pink), var(--dracula-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -2px;
+        }
+
+        .error-title {
+            font-size: 2rem;
+            margin: 0 0 20px 0;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .error-message {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .error-links {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .error-links a {
+            padding: 12px 28px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .error-links a.primary {
+            background: linear-gradient(135deg, var(--dracula-cyan), var(--dracula-purple));
+            color: #04060d;
+        }
+
+        .error-links a.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(139, 233, 253, 0.3);
+        }
+
+        .error-links a.secondary {
+            background: var(--glass-bg-hover);
+            color: var(--text-main);
+            border: 1px solid var(--glass-border);
+        }
+
+        .error-links a.secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-title">Page Not Found</h2>
+        <p class="error-message">
+            Whoopsie! Sorry mate, we couldn’t find the page you were looking for. :<
+            <br><br>
+            > Return to the <a href="/" class="primary">Main Page</a><br>
+            > Browse the <a href="/table-of-contents/">Table of Contents</a><br>
+            > Use the site search in the header to find what you need
+            <br><br>
+            If you following a broken link, please check the spelling or try a different page.
+        </p>
+    </div>
+</body>
+</html>
